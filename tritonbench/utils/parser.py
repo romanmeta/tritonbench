@@ -394,6 +394,12 @@ def get_parser(args=None):
             type=str,
             help="Set what version of Triton we are using for logging purposes.",
         )
+        parser.add_argument(
+            "--hardware",
+            type=str,
+            default=None,
+            help="Specify the hardware target (e.g., H100, B200, MI300) for Scuba logging.",
+        )
         # Diode args (Diode not available in OSS)
         parser.add_argument(
             "--diode-version",
